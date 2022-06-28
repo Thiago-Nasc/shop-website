@@ -46,6 +46,25 @@ body {
 .header .menu a {
     display: inline-block;
     color: var(--cor-secondary);
+    position: relative;
+    padding: 5px 10px;
+}
+
+.header .menu a:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    transition: all .5s linear;
+    background-color: rgba(255, 255, 255, .5);
+    z-index: -1;
+}
+
+.header .menu a:hover:before {
+    width: 100%;
 }
 
 .header .menu .menu-item-text {
